@@ -4,18 +4,18 @@ vraiCSS
 VraiCSS its a simple yet useful script that allows to use vars (and soon other methods) on CSS allowing some code reuse.
 
 
-Feature
+Feature(s)
 ---
    - variable support
  
- ###Wishlist (future features)
-    - Math Operations
-    - include() support
-    - Minimize / pack
-    
+   ###Wishlist (future features)###
+   - Math Operations
+   - include() support
+   - Minimize / pack
 
-##Usage
 
+Usage
+---
 Add this rewrite rule to .htaccess on your project folder:
 
         *RewriteRule ^(.*)\.css$ /vraiCSS.php?css=$1.css [L]*
