@@ -1,4 +1,13 @@
 <?php
+/* ----------------------------- vraiCSS ----------------------------------
+* simple yet useful script that allows to use vars 
+* (and soon other methods) on CSS allowing some code reuse.
+*
+* Copyright (c) 2010 Yëco, pobreyeco@gmail.com
+*
+* Planned to be Licensed under MIT-style license (google it).
+*
+*/
 
 if(!isset($_GET['css']))exit('/* a "css" parameter is needed*/');
 $filename=$_GET['css'];
