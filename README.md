@@ -7,12 +7,12 @@ VraiCSS its a simple yet useful script that allows to use vars (and soon other m
 Feature
 ---
    - variable support
+   - Minifier
    
    
    **Wishlist (future features)**  
     * Math Operations
     * include() support
-    * Minimize / pack
  
 
 ##Usage
@@ -34,3 +34,8 @@ Now you can add your vars as comments using this syntax:
     h1 { color: !DARKBLUE; font-size: 1.1em }
     p { color: !LIGHTBLUE; font-style: italic }
     div { color: !LIGHTBLUE; border: !INNERBORDER }
+
+If you want to minify the output just add "min" param on your rule or direct link.
+    
+    RewriteRule ^(.*)\.css$ /vraiCSS.php?min&css=$1.css [L]
+    
