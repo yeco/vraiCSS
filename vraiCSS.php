@@ -12,9 +12,14 @@
 if(!isset($_GET['css']))exit('/* a "css" parameter is needed*/');
 $filename=$_GET['css'];
 
-if(strpos($filename,'..')!==false)exit('/* an absolute address for your css is needed*/');
-$filename=$_SERVER['DOCUMENT_ROOT'].'/'.$filename;
+
+
+
+$location = $_SERVER['PATH_INFO'];
+$filename = realpath($location).'/'.$filename;
+
 if(!file_exists($filename))exit('/* bummer, the css file does not exist */');
+
 
 
 $matches=array();
@@ -25,10 +30,11 @@ preg_match_all('/^(!.*)$/m',$file,$matches);
 $names=array();
 $values=array();
 foreach(array_reverse($matches[0]) as $match){
-  $match=preg_replace('/\s+/',' ',rtrim(ltrim($match)));
+  $match=preg_replace('/\s+/',' ',trim($match));  
   $names[]=preg_replace('/\s.*/','',$match);
   $values[]=preg_replace('/^[^\s]*\s/','',$match);
 }
+
 
 
 header('Cache-Control: max-age=2592000');
@@ -38,4 +44,4 @@ header('Pragma:');
 header('Content-type: text/css; charset=utf-8');
 
 
-echo str_replace($names,$values,$file);
+echo $output;
