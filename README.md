@@ -4,7 +4,7 @@ vraiCSS
 VraiCSS its a simple yet useful script that allows to use vars (and soon other methods) on CSS allowing some code reuse.
 
 
-Feature
+Features
 ---
    - variable support
    - Minifier
