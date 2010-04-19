@@ -12,7 +12,7 @@
 if(!isset($_GET['css']))exit('/* a "css" parameter is needed*/');
 $filename=$_GET['css'];
 
-
+$min = isset($_GET['min']);
 
 
 $location = $_SERVER['PATH_INFO'];
@@ -34,6 +34,30 @@ foreach(array_reverse($matches[0]) as $match){
   $names[]=preg_replace('/\s.*/','',$match);
   $values[]=preg_replace('/^[^\s]*\s/','',$match);
 }
+
+/* 
+* Simple minifier 
+* @params $css String
+*/
+
+function doMin( $css ) {
+	$css = preg_replace( '#\s+#', ' ', $css );
+	$css = preg_replace( '#/\*.*?\*/#s', '', $css );
+	$css = str_replace( '; ', ';', $css );
+	$css = str_replace( ': ', ':', $css );
+	$css = str_replace( ' {', '{', $css );
+	$css = str_replace( '{ ', '{', $css );
+	$css = str_replace( ', ', ',', $css );
+	$css = str_replace( '} ', '}', $css );
+	$css = str_replace( ';}', '}', $css );
+
+	return trim( $css );
+};
+
+
+$output = str_replace($names,$values,$file);
+
+$output = ($min)?doMin($output):$output;
 
 
 
