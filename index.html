@@ -53,9 +53,16 @@
     </div>
 
     <h2>Install</h2>
-    <p>Add sthis rewrite rule to .htaccess on your project folder:
+    <p>Add this rewrite rule to .htaccess on your project folder:
     
     <pre>RewriteRule ^(.*)\.css$ /vraiCSS.php?css=$1.css [L]</pre>
+    
+    Include your CSS in your html as you would normally do:
+    
+    <pre>
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/file.css&quot; type=&quot;text/css&quot; /&gt;
+    </pre>
+    
     
     Now you can add your vars as comments using this syntax:
     
