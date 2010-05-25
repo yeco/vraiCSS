@@ -53,12 +53,12 @@
     </div>
 
     <h2>Install</h2>
-<p>Add this rewrite rule to .htaccess on your project folder:
+<p>Add this rewrite rule to .htaccess on your project folder:</p>
 
-RewriteRule ^(.*)\.css$ /vraiCSS.php?css=$1.css [L]
-Now you can add your vars as comments using this syntax:
+<pre>RewriteRule ^(.*)\.css$ /vraiCSS.php?css=$1.css [L]</pre>
+<p>Now you can add your vars as comments using this syntax:</p>
 
-/*
+<pre>/*
 !DARKBLUE    #04517C
 !LIGHTBLUE    #0480C7
 !INNERBORDER        1px solid #369
@@ -67,13 +67,18 @@ Now you can add your vars as comments using this syntax:
 h1 { color: !DARKBLUE; font-size: 1.1em }
 p { color: !LIGHTBLUE; font-style: italic }
 div { color: !LIGHTBLUE; border: !INNERBORDER }
-If you want to minify the output just add "min" param on your rule or direct link.
+</pre>
+<p>
+If you want to minify the output just add "min" param on your rule or direct link.</p>
 
-RewriteRule ^(.*)\.css$ /vraiCSS.php?min&css=$1.css [L]</p>
+<pre>RewriteRule ^(.*)\.css$ /vraiCSS.php?min&css=$1.css [L]</pre>
 <h2>Authors</h2>
-<p>Jasson Qasqant (jcascante@gmail.com)<br/><br/>      </p>
+<p>Jasson Qasqant (jcascante@gmail.com)
+<br/>
+<br/>      </p>
 <h2>Contact</h2>
-<p>Jasson Qasqant (jcascante@gmail.com)<br/>      </p>
+<p>Jasson Qasqant (jcascante@gmail.com)
+<br/>      </p>
 
 
     <h2>Download</h2>
