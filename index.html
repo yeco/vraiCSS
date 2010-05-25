@@ -53,10 +53,10 @@
     </div>
 
     <h2>Install</h2>
-<p>Add this rewrite rule to .htaccess on your project folder:</p>
+<p>Add this rewrite rule to .htaccess on your project folder:
 
 <pre>RewriteRule ^(.*)\.css$ /vraiCSS.php?css=$1.css [L]</pre>
-<p>Now you can add your vars as comments using this syntax:</p>
+Now you can add your vars as comments using this syntax:
 
 <pre>/*
 !DARKBLUE    #04517C
@@ -68,10 +68,12 @@ h1 { color: !DARKBLUE; font-size: 1.1em }
 p { color: !LIGHTBLUE; font-style: italic }
 div { color: !LIGHTBLUE; border: !INNERBORDER }
 </pre>
-<p>
-If you want to minify the output just add "min" param on your rule or direct link.</p>
+
+If you want to minify the output just add "min" param on your rule or direct link.
 
 <pre>RewriteRule ^(.*)\.css$ /vraiCSS.php?min&css=$1.css [L]</pre>
+
+</p>
 <h2>Authors</h2>
 <p>Jasson Qasqant (pobreyeco[at]gmail.com)
 <br/>
